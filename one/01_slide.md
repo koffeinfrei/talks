@@ -1,6 +1,9 @@
 !SLIDE 
 # capybara #
 
+!SLIDE center
+![capybara](capybara.jpg)
+
 !SLIDE bullets incremental
 # test frameworks #
 
