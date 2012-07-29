@@ -26,3 +26,12 @@ h1 {
 .content > ul > li {
     margin-left: 0;
 }
+
+a, a:visited, a:active {
+    color: #54854F;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
