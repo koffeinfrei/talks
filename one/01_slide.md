@@ -5,6 +5,13 @@
 ![capybara](capybara.jpg)
 
 !SLIDE bullets incremental
+# overview #
+* automated user interaction
+* automatically waits for asynchronous tasks
+* driver agnostic
+* high level access to ui elements
+
+!SLIDE bullets incremental
 # test frameworks #
 
 * cucumber
