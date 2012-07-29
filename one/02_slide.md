@@ -1,39 +1,65 @@
 !SLIDE
-# in the wild #
+# dsl #
 
 !SLIDE
-# setup #
-
-!SLIDE
-
+# navigating #
     @@@ ruby
-    Capybara.default_driver = :selenium
-
-    # sinatra
-    Capybara.app = App
-
-    # remote app
-    Capybara.app_host = 'http://www.google.com'
+    visit('/projects')
+    visit(post_comments_path(post))
 
 !SLIDE
-# set browser #
-
+# clicking links and buttons #
     @@@ ruby
-    Capybara.register_driver :selenium do |app|
-      Capybara::Selenium::Driver.new(
-        app, :browser => :chrome
-      )
+    click_link('id-of-link')
+    click_link('Link Text')
+    click_button('Save')
+    click_on('Link Text') # links or buttons
+
+!SLIDE
+# interacting with forms #
+    @@@ ruby
+    fill_in('Username', :with => 'user')
+    choose('A Radio Button')
+    check('A Checkbox')
+    attach_file('Image', '/path/to/image.jpg')
+    select('Option', :from => 'Select Box')
+
+!SLIDE
+# querying (rspec matchers) #
+    @@@ ruby
+    page.should have_selector('table tr')
+    page.should have_selector(
+      :xpath, '//table/tr')
+    page.should have_xpath('//table/tr')
+    page.should have_css('table tr.foo')
+    page.should have_content('foo')
+
+!SLIDE
+# finding #
+    @@@ ruby
+    find_field('First Name').value
+    find_link('Hello').visible?
+    find_button('Send').click
+
+    find("#overlay").find("h1").click
+    all('a').each { |a| a[:href] }
+
+!SLIDE
+# scoping #
+    @@@ ruby
+    within("li#employee") do
+      fill_in 'Name', :with => 'Jimmy'
     end
 
 !SLIDE
-# spec reload #
-
+# scripting #
     @@@ ruby
-    context 'when i change the unit width' do
-      it 'should show the loading indicator' do
-        fill_in 'param-unit-width', :with => 2
-        page.should have_selector(
-          '.preview-loading-text')
-      end
-    end
+    page.execute_script("$('body').empty()")
+    result = page.evaluate_script('4 + 4');
+
+!SLIDE
+# debugging #
+    @@@ ruby
+    save_and_open_page # snapshot
+    print page.html
 
