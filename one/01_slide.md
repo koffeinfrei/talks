@@ -1,9 +1,38 @@
 !SLIDE 
-# My Presentation #
+# capybara #
 
 !SLIDE bullets incremental
-# Bullet Points #
+# test frameworks #
 
-* first point
-* second point
-* third point
+* cucumber
+* rspec
+* test::unit
+* minitest::spec
+
+!SLIDE bullets incremental
+# drivers #
+
+!SLIDE bullets incremental
+# rack_test #
+* fast, no server
+* no js
+* mechanize
+
+  rack_test with remote server
+
+!SLIDE bullets incremental
+# selenium #
+* (2.0 aka webdriver)
+
+!SLIDE bullets incremental
+# webkit #
+* QtWebKitk
+* headless
+
+!SLIDE bullets incremental
+# poltergeist #
+* phantomjs
+* advantages over selenium
+* screenshots
+* resizing the window
+* remote debugging (web inspector use!)
