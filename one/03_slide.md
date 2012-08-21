@@ -65,9 +65,24 @@
     context 'when i enable anatomy' do
       it 'shows the anatomy image' do
         within '#menu' do
-          click_action 'on'
+          click_link 'on'
         end
         page.should have_selector '#info-panel'
       end
     end
 
+!SLIDE
+# spec sample 3 #
+    @@@ ruby
+    context 'when i click the "webfont" link' do
+      it 'should call the font generator url' do
+        click_link('webfont')
+        current_url.should
+          include 'modulator/export/font/web'
+      end
+    end
+
+
+.notes git co -b capybara-eachbrowser
+.notes change to firefox/chrome
+.notes change to webkit
