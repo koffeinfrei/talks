@@ -24,6 +24,7 @@
 
 !SLIDE bullets incremental
 # rack_test #
+* default
 * fast, no server
 * no js
 * mechanize
@@ -32,17 +33,23 @@
 
 !SLIDE bullets incremental
 # selenium #
-* (2.0 aka webdriver)
+* 2.0 aka webdriver
+* firefox, chrome, ie, ...
 
 !SLIDE bullets incremental
 # webkit #
-* QtWebKitk
 * headless
+* QtWebKitk
+* logging / messages
+* screenshots
+* cookies
+* resizing the window
 
 !SLIDE bullets incremental
 # poltergeist #
+* headless
 * phantomjs
-* advantages over selenium
 * screenshots
 * resizing the window
-* remote debugging (web inspector use!)
+* remote debugging (web inspector)
+* no X (CI integration)
