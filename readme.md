@@ -8,3 +8,5 @@ each talk is a separate branch.
 capybara acceptance testing, showcased by the [metaflop](http://www.metaflop.com) project.
 
 https://github.com/koffeinfrei/talks/tree/capybara-metaflop
+[slides on speakerdeck](https://speakerdeck.com/u/koffeinfrei/p/functional-testing-with-capybara)
+[slides on slideshare](http://www.slideshare.net/koffeinfrei/functional-testing-with-capybara)
